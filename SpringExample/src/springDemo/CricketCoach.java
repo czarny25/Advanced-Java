@@ -1,5 +1,8 @@
 package springDemo;
 
+import org.springframework.stereotype.Component;
+
+
 public class CricketCoach implements Coach, Athlete {
 
 	
@@ -46,6 +49,15 @@ public class CricketCoach implements Coach, Athlete {
 	@Override
 	public String myDiscipline() {
 		return athlete.myDiscipline();
+	}
+	
+	public void startUp() {
+		System.out.println("Start up stuff");
+	}
+	
+	
+	public void destroyStruff() {
+		System.out.println("Destroy stuff");
 	}
 	
 	

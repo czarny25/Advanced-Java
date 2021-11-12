@@ -1,5 +1,6 @@
 package springDemo;
 
+
 public class BaseCoach implements Coach {
 	
 	

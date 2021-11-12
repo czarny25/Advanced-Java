@@ -9,6 +9,8 @@
 
 	<!--  load property files -->
 	<context:property-placeholder location="classpath:app.properties" />
+	<context:component-scan base-package="springDemo"/>
+	
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
@@ -20,12 +22,16 @@
     </bean>
     
  	<bean id="myCoach"
- 		class="springDemo.BoxCoach">
+ 		class="springDemo.BoxCoach"
+ 		>
  			<constructor-arg ref="myFortuneService"/>
+ 			
  	</bean>
-    
+    <!--  -->
     <bean id="myCricketCoach"
-    	class="springDemo.CricketCoach">
+    	class="springDemo.CricketCoach"
+    	init-method="startUp"
+ 		destroy-method="destroyStruff">
             <property name="fortuneService" ref="myFortuneService"/>
             <property name="athlete" ref="myAthlete"/>
             <property name="emailAddress" value="${foo.email}"/>

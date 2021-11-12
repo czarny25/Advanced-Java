@@ -18,8 +18,11 @@
     </bean>
     
  	<bean id="myCoach"
- 		class="springDemo.BoxCoach">
- 			<constructor-arg ref="myFortuneService"/>
+ 		class="springDemo.BoxCoach"
+ 		scope="prototype">
+ 		
+ 		<constructor-arg ref="myFortuneService"/>
+ 			
  	</bean>
     
 </beans>

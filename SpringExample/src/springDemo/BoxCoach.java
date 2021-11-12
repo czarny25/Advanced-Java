@@ -1,5 +1,8 @@
 package springDemo;
 
+import org.springframework.context.annotation.ComponentScan;
+
+//@ComponentScan("myBoxCoach")
 public class BoxCoach implements Coach {
 
 	private FortuneService fortuneService;	
